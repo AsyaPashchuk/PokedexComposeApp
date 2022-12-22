@@ -171,10 +171,10 @@ fun PokedexEntry(
             },
         contentAlignment = Center
     ) {
+        val painter = rememberImagePainter(
+            data = entry.imgUrl
+        )
         Column {
-            val painter = rememberImagePainter(
-                data = entry.imgUrl
-            )
             val painterState = painter.state
             Image(
                 painter = painter,
